@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://bqua0hdkfwgm6"]
+
+[ext_resource type="Texture2D" uid="uid://depb3pwha8a71" path="res://Assets/Heart.png" id="1_quwos"]
+[ext_resource type="Script" path="res://hud.gd" id="1_yhx8p"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_nihut"]
+font_size = 32
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_yhx8p")
+
+[node name="StartButton" type="Button" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 32
+text = "START
+ROUND"
+
+[node name="HealthCount" type="Label" parent="."]
+offset_left = 50.0
+offset_right = 104.0
+offset_bottom = 48.0
+text = "100"
+label_settings = SubResource("LabelSettings_nihut")
+
+[node name="Heart" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_quwos")
+centered = false
+offset = Vector2(30, 50)
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]

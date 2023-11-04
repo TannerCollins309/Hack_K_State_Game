@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=3 uid="uid://dbpldomk65ck6"]
+
+[ext_resource type="Script" path="res://Assets/menu/Main_Menu.gd" id="1_bweva"]
+[ext_resource type="Texture2D" uid="uid://dr65o2jpf7km5" path="res://Assets/menu/1304990899.or.90622.png" id="1_imtdt"]
+
+[sub_resource type="SystemFont" id="SystemFont_8e4ng"]
+
+[node name="Main_Menu" type="Node"]
+script = ExtResource("1_bweva")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="1304990899_or_90622" type="Sprite2D" parent="CanvasLayer"]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_imtdt")
+centered = false
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = 76.0
+offset_right = 150.0
+offset_bottom = 176.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = SubResource("SystemFont_8e4ng")
+theme_override_font_sizes/font_size = 64
+text = "PLAY"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -325.0
+offset_top = -150.0
+offset_right = 325.0
+offset_bottom = 63.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 72
+theme_override_font_sizes/bold_font_size = 72
+bbcode_enabled = true
+text = "[center][b]ZOMBOCALYPSE OVERDRIVE[/b][/center]"
+
+[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]
