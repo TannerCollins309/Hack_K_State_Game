@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3 uid="uid://c1udrqkpm0x15"]
+
+[ext_resource type="Script" path="res://Assets/zombies/large_z/large_zombie_move.gd" id="1_2n7ag"]
+[ext_resource type="Script" path="res://Assets/zombies/large_z/large_zombie_values.gd" id="1_ed3w7"]
+[ext_resource type="SpriteFrames" uid="uid://duf7svie7o1i3" path="res://Assets/zombies/large_z/large_z_walk.tres" id="2_v5p5g"]
+[ext_resource type="Texture2D" uid="uid://dhkkd3sp1w88v" path="res://Assets/healthbar_red.png" id="3_68sgc"]
+[ext_resource type="Texture2D" uid="uid://wwn73y3dtcma" path="res://Assets/healthbar.png" id="4_2g0t7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ykky1"]
+radius = 72.0
+
+[node name="large_z_move" type="PathFollow2D"]
+position = Vector2(-35, 132)
+rotation = 0.0187478
+loop = false
+script = ExtResource("1_2n7ag")
+
+[node name="Large Zombie" type="Area2D" parent="."]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_ed3w7")
+
+[node name="large_z_sprite" type="AnimatedSprite2D" parent="Large Zombie"]
+sprite_frames = ExtResource("2_v5p5g")
+animation = &"large_z_2"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Large Zombie"]
+shape = SubResource("CircleShape2D_ykky1")
+
+[node name="HealthBar" type="TextureProgressBar" parent="Large Zombie"]
+visible = false
+offset_left = -27.0
+offset_top = -48.0
+offset_right = 153.0
+offset_bottom = -18.0
+scale = Vector2(0.3, 0.3)
+value = 100.0
+texture_under = ExtResource("3_68sgc")
+texture_progress = ExtResource("4_2g0t7")

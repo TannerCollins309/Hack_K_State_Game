@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3 uid="uid://y1b1ic14ad8r"]
+
+[ext_resource type="Script" path="res://Assets/zombies/reg_z/regular_zombie_move.gd" id="1_1hj44"]
+[ext_resource type="Script" path="res://Assets/zombies/reg_z/regular_zombie_values.gd" id="1_bco22"]
+[ext_resource type="SpriteFrames" uid="uid://dtb04ngxgp305" path="res://Assets/zombies/reg_z/reg_z_walk.tres" id="2_ibavu"]
+[ext_resource type="Texture2D" uid="uid://dhkkd3sp1w88v" path="res://Assets/healthbar_red.png" id="3_atd6q"]
+[ext_resource type="Texture2D" uid="uid://wwn73y3dtcma" path="res://Assets/healthbar.png" id="4_m5b2g"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xhqdv"]
+radius = 25.0
+
+[node name="reg_z_move" type="PathFollow2D"]
+position = Vector2(-35, 132)
+rotation = 0.0187478
+loop = false
+script = ExtResource("1_1hj44")
+
+[node name="Regular Zombie" type="Area2D" parent="."]
+script = ExtResource("1_bco22")
+
+[node name="reg_z_sprite" type="AnimatedSprite2D" parent="Regular Zombie"]
+scale = Vector2(0.35, 0.35)
+sprite_frames = ExtResource("2_ibavu")
+animation = &"reg_z_2"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Regular Zombie"]
+shape = SubResource("CircleShape2D_xhqdv")
+
+[node name="HealthBar" type="TextureProgressBar" parent="Regular Zombie"]
+visible = false
+offset_left = -27.0
+offset_top = -48.0
+offset_right = 153.0
+offset_bottom = -18.0
+scale = Vector2(0.3, 0.3)
+value = 100.0
+texture_under = ExtResource("3_atd6q")
+texture_progress = ExtResource("4_m5b2g")

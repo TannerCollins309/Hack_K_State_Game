@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://bogj42ljjrbwn"]
+
+[ext_resource type="Script" path="res://Assets/zombies/crawler_z/crawling_zombie_values.gd" id="1_j0ue0"]
+[ext_resource type="Script" path="res://Assets/zombies/crawler_z/crawling_zombie_move.gd" id="1_ob70o"]
+[ext_resource type="SpriteFrames" uid="uid://dmrunhc1q8756" path="res://Assets/zombies/crawler_z/crawler_z_walk.tres" id="2_nllys"]
+[ext_resource type="Texture2D" uid="uid://dhkkd3sp1w88v" path="res://Assets/healthbar_red.png" id="3_b4jrq"]
+[ext_resource type="Texture2D" uid="uid://wwn73y3dtcma" path="res://Assets/healthbar.png" id="4_vme1l"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_37vuh"]
+radius = 14.785
+height = 67.85
+
+[node name="crawler_z_move" type="PathFollow2D"]
+position = Vector2(-35, 132)
+rotation = 0.0187478
+loop = false
+script = ExtResource("1_ob70o")
+
+[node name="Crawling Zombie" type="Area2D" parent="."]
+script = ExtResource("1_j0ue0")
+
+[node name="crawler_z_sprite" type="AnimatedSprite2D" parent="Crawling Zombie"]
+scale = Vector2(0.35, 0.35)
+sprite_frames = ExtResource("2_nllys")
+animation = &"crawler_z_1"
+frame_progress = 0.666069
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Crawling Zombie"]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_37vuh")
+
+[node name="HealthBar" type="TextureProgressBar" parent="Crawling Zombie"]
+visible = false
+offset_left = -27.0
+offset_top = -48.0
+offset_right = 153.0
+offset_bottom = -18.0
+scale = Vector2(0.3, 0.3)
+value = 100.0
+texture_under = ExtResource("3_b4jrq")
+texture_progress = ExtResource("4_vme1l")

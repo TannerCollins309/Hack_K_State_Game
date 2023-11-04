@@ -1,58 +1,14 @@
-[gd_scene load_steps=9 format=3 uid="uid://cgrqorx70yrde"]
+[gd_scene load_steps=4 format=3 uid="uid://cgrqorx70yrde"]
 
-[ext_resource type="SpriteFrames" uid="uid://dtb04ngxgp305" path="res://Assets/zombies/reg_z/reg_z_walk.tres" id="1_56ubs"]
-[ext_resource type="SpriteFrames" uid="uid://duf7svie7o1i3" path="res://Assets/zombies/large_z/large_z_walk.tres" id="2_1kqr0"]
-[ext_resource type="SpriteFrames" uid="uid://dmrunhc1q8756" path="res://Assets/zombies/crawler_z/crawler_z_walk.tres" id="3_rvb1w"]
+[ext_resource type="Script" path="res://Assets/zombies/zombies.gd" id="1_jngll"]
 [ext_resource type="Texture2D" uid="uid://dhkkd3sp1w88v" path="res://Assets/healthbar_red.png" id="4_frl0y"]
 [ext_resource type="Texture2D" uid="uid://wwn73y3dtcma" path="res://Assets/healthbar.png" id="4_jmx3i"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ak16f"]
-radius = 25.0
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_c8inc"]
-radius = 72.0
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gn7im"]
-radius = 14.785
-height = 67.85
-
 [node name="Zombie" type="Node"]
-
-[node name="Regular Zombie" type="Area2D" parent="."]
-
-[node name="reg_z_sprite" type="AnimatedSprite2D" parent="Regular Zombie"]
-scale = Vector2(0.35, 0.35)
-sprite_frames = ExtResource("1_56ubs")
-animation = &"reg_z_2"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Regular Zombie"]
-shape = SubResource("CircleShape2D_ak16f")
-
-[node name="Large Zombie" type="Area2D" parent="."]
-visible = false
-scale = Vector2(0.5, 0.5)
-
-[node name="large_z_sprite" type="AnimatedSprite2D" parent="Large Zombie"]
-sprite_frames = ExtResource("2_1kqr0")
-animation = &"large_z_2"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Large Zombie"]
-shape = SubResource("CircleShape2D_c8inc")
-
-[node name="Crawling Zombie" type="Area2D" parent="."]
-visible = false
-
-[node name="crawler_z_sprite" type="AnimatedSprite2D" parent="Crawling Zombie"]
-scale = Vector2(0.35, 0.35)
-sprite_frames = ExtResource("3_rvb1w")
-animation = &"crawler_z_1"
-frame_progress = 0.666069
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Crawling Zombie"]
-rotation = 1.5708
-shape = SubResource("CapsuleShape2D_gn7im")
+script = ExtResource("1_jngll")
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+visible = false
 offset_left = -27.0
 offset_top = -48.0
 offset_right = 153.0
