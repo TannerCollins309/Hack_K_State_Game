@@ -1,0 +1,73 @@
+[gd_resource type="SpriteFrames" load_steps=11 format=3 uid="uid://duf7svie7o1i3"]
+
+[ext_resource type="Texture2D" uid="uid://7gtrnouh4awc" path="res://Assets/large_z/large_z_1.png" id="1_p837i"]
+[ext_resource type="Texture2D" uid="uid://btkdwvwvgss8l" path="res://Assets/large_z/large_z_2.png" id="2_vxyaj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mf50f"]
+atlas = ExtResource("1_p837i")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mjc2s"]
+atlas = ExtResource("1_p837i")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e8wo2"]
+atlas = ExtResource("1_p837i")
+region = Rect2(192, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gxvgy"]
+atlas = ExtResource("1_p837i")
+region = Rect2(0, 384, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g0vh4"]
+atlas = ExtResource("2_vxyaj")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m6eyi"]
+atlas = ExtResource("2_vxyaj")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xxawl"]
+atlas = ExtResource("2_vxyaj")
+region = Rect2(192, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fmmhm"]
+atlas = ExtResource("2_vxyaj")
+region = Rect2(0, 384, 192, 192)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mf50f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mjc2s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e8wo2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gxvgy")
+}],
+"loop": true,
+"name": &"large_z_1",
+"speed": 1.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g0vh4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m6eyi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xxawl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fmmhm")
+}],
+"loop": true,
+"name": &"large_z_2",
+"speed": 5.0
+}]

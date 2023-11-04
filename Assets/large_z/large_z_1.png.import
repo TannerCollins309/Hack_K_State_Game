@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://7gtrnouh4awc"
-path="res://.godot/imported/fat zombitch (1).png-9d31dfac7999899960cf068b1967b50d.ctex"
+path="res://.godot/imported/large_z_1.png-e1f6988a7cfdf07bdc6e40c8e6866c27.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/fat zombitch (1).png"
-dest_files=["res://.godot/imported/fat zombitch (1).png-9d31dfac7999899960cf068b1967b50d.ctex"]
+source_file="res://Assets/large_z/large_z_1.png"
+dest_files=["res://.godot/imported/large_z_1.png-e1f6988a7cfdf07bdc6e40c8e6866c27.ctex"]
 
 [params]
 

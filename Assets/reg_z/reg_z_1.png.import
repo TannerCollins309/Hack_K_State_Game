@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://btkdwvwvgss8l"
-path="res://.godot/imported/fat zombitch var2.png-8ab2fb3c184277991ebb10709ab3862b.ctex"
+uid="uid://dnsf5nsolqqxv"
+path="res://.godot/imported/reg_z_1.png-a01b65ea56052fd502d6763158827483.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/fat zombitch var2.png"
-dest_files=["res://.godot/imported/fat zombitch var2.png-8ab2fb3c184277991ebb10709ab3862b.ctex"]
+source_file="res://Assets/reg_z/reg_z_1.png"
+dest_files=["res://.godot/imported/reg_z_1.png-a01b65ea56052fd502d6763158827483.ctex"]
 
 [params]
 

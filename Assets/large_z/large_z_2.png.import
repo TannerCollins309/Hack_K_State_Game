@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8onvlf3n5sqw"
-path="res://.godot/imported/crawling zombitch (1).png-ecadc6a0345ee039e928e4f5523917bc.ctex"
+uid="uid://btkdwvwvgss8l"
+path="res://.godot/imported/large_z_2.png-3a217e259a3679e69035f8bf3988cabe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/crawling zombitch (1).png"
-dest_files=["res://.godot/imported/crawling zombitch (1).png-ecadc6a0345ee039e928e4f5523917bc.ctex"]
+source_file="res://Assets/large_z/large_z_2.png"
+dest_files=["res://.godot/imported/large_z_2.png-3a217e259a3679e69035f8bf3988cabe.ctex"]
 
 [params]
 

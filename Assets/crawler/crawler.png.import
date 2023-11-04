@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wwn73y3dtcma"
-path="res://.godot/imported/zombitch healthbar.png-b0f5d371bb26c4d9066c9a6875330162.ctex"
+uid="uid://8onvlf3n5sqw"
+path="res://.godot/imported/crawler.png-73a0baa5977bda3366b996be468baf84.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/zombitch healthbar.png"
-dest_files=["res://.godot/imported/zombitch healthbar.png-b0f5d371bb26c4d9066c9a6875330162.ctex"]
+source_file="res://Assets/crawler/crawler.png"
+dest_files=["res://.godot/imported/crawler.png-73a0baa5977bda3366b996be468baf84.ctex"]
 
 [params]
 

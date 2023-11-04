@@ -1,0 +1,73 @@
+[gd_resource type="SpriteFrames" load_steps=11 format=3 uid="uid://dtb04ngxgp305"]
+
+[ext_resource type="Texture2D" uid="uid://dnsf5nsolqqxv" path="res://Assets/reg_z/reg_z_1.png" id="1_tryip"]
+[ext_resource type="Texture2D" uid="uid://c4gshe6eo0f8n" path="res://Assets/reg_z/reg_z_2.png" id="2_27obm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f5ss8"]
+atlas = ExtResource("1_tryip")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l0xk5"]
+atlas = ExtResource("1_tryip")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hmbh3"]
+atlas = ExtResource("1_tryip")
+region = Rect2(0, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nrhob"]
+atlas = ExtResource("1_tryip")
+region = Rect2(192, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c7lug"]
+atlas = ExtResource("2_27obm")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dkl54"]
+atlas = ExtResource("2_27obm")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g7wfy"]
+atlas = ExtResource("2_27obm")
+region = Rect2(0, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nhfxd"]
+atlas = ExtResource("2_27obm")
+region = Rect2(192, 192, 192, 192)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f5ss8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l0xk5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hmbh3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nrhob")
+}],
+"loop": true,
+"name": &"reg_z_1",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c7lug")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dkl54")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g7wfy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nhfxd")
+}],
+"loop": true,
+"name": &"reg_z_2",
+"speed": 4.0
+}]

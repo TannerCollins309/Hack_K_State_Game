@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c4gshe6eo0f8n"
-path="res://.godot/imported/zombitch1var2.png-d8b0b2f701afce09bacccf5b67b8656b.ctex"
+path="res://.godot/imported/reg_z_2.png-1b3d91e73b3b547365e92cd3832d5d29.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/zombitch1var2.png"
-dest_files=["res://.godot/imported/zombitch1var2.png-d8b0b2f701afce09bacccf5b67b8656b.ctex"]
+source_file="res://Assets/reg_z/reg_z_2.png"
+dest_files=["res://.godot/imported/reg_z_2.png-1b3d91e73b3b547365e92cd3832d5d29.ctex"]
 
 [params]
 
