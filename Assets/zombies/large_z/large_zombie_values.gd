@@ -5,7 +5,8 @@ var health = 6
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	var zomb_types = $large_z_sprite.sprite_frames.get_animation_names()
+	$large_z_sprite.play(zomb_types[randi() % zomb_types.size()])
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
