@@ -39,7 +39,6 @@ script = SubResource("GDScript_6rhg1")
 
 [node name="Amogus" type="Area2D" parent="Path2D/PathFollow2D"]
 rotation = -0.0187478
-scale = Vector2(1, 1)
 
 [node name="SpriteAnim" type="AnimatedSprite2D" parent="Path2D/PathFollow2D/Amogus"]
 scale = Vector2(0.05, 0.05)
