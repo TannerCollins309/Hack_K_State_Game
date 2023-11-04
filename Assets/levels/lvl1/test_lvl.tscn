@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4n0dleihftoj"]
+
+[ext_resource type="Texture2D" uid="uid://cstwr1s66s38p" path="res://Assets/levels/lvl1/lvl1.png" id="1_hcw6i"]
+[ext_resource type="Curve2D" uid="uid://brwu2cfhip3o" path="res://Assets/levels/lvl1/map1path.tres" id="2_k2u32"]
+
+[node name="test_lvl" type="Node2D"]
+
+[node name="visual_map" type="Sprite2D" parent="."]
+texture = ExtResource("1_hcw6i")
+centered = false
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = ExtResource("2_k2u32")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(-35, 132)
+rotation = 0.0187478
+loop = false

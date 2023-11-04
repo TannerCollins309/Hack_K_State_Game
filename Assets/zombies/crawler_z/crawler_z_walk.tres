@@ -1,0 +1,39 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://dmrunhc1q8756"]
+
+[ext_resource type="Texture2D" uid="uid://8onvlf3n5sqw" path="res://Assets/zombies/crawler_z/crawler.png" id="1_171np"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jux00"]
+atlas = ExtResource("1_171np")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nnx3b"]
+atlas = ExtResource("1_171np")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r6bvq"]
+atlas = ExtResource("1_171np")
+region = Rect2(192, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t83el"]
+atlas = ExtResource("1_171np")
+region = Rect2(0, 384, 192, 192)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jux00")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nnx3b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r6bvq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t83el")
+}],
+"loop": true,
+"name": &"crawler_z_1",
+"speed": 4.0
+}]

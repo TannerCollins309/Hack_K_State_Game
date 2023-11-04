@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Hack_K_State_Game"
+run/main_scene="res://Assets/zombies/zombies.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
 config/icon="res://icon.svg"
 
