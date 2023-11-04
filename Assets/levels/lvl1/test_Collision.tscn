@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://d18yhsfpg748g"]
+
+[ext_resource type="PackedScene" uid="uid://c3asr02yfy877" path="res://testTower.tscn" id="1_4hrh3"]
+[ext_resource type="Script" path="res://Assets/levels/lvl1/Node2D.gd" id="2_s8r83"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_psere"]
+radius = 50.0
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_r88b4"]
+
+[node name="test_Collision" type="Node2D"]
+position = Vector2(320, 188)
+
+[node name="testTower" parent="." instance=ExtResource("1_4hrh3")]
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(178, -6)
+script = ExtResource("2_s8r83")
+
+[node name="Area2D" type="Area2D" parent="Node2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Area2D"]
+shape = SubResource("CircleShape2D_psere")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D"]
+scale = Vector2(10, 10)
+texture = SubResource("CanvasTexture_r88b4")
+
+[connection signal="area_entered" from="Node2D/Area2D" to="testTower" method="_on_area_2d_area_entered"]
