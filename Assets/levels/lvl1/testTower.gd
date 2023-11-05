@@ -1,21 +1,31 @@
 extends Node2D
 
 var targetsInRange = []
+var currentTarget
 
 func _physics_process(delta):
 	turn()
 	
 func turn():
-		#var enemy_position = get_node("testTower").get_collision_point()
-		#get_node("testTower").look_at(enemy_position)
-		# print(collider)
-	var area = get_node("testTowerRange").get
-	# print(area)
-	#var area = get_node("testTowerRange").get
-	#print(area)
-	pass
+	currentTarget = getTarget()
+	print(currentTarget)
 
-func _on_area_2d_area_entered(area):
+func getTarget():
+	#var farthest
+	#var farthestProgress = 0
+	# var progress
+	var node
+	for i in targetsInRange:
+		# node = get_tree().get_root().i
+		print(typeof(i))
+	#	progress = get_tree().get_root().get_node(i).get(progress)
+	#	if progress > farthest:
+	#		farthest = i
+	#		farthestProgress = progress
+	#return farthest
+	return null
+
+func attack(target):
 	pass
 
 func _on_test_tower_range_body_entered(body):
