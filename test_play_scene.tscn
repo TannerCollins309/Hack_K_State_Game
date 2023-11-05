@@ -1,0 +1,32 @@
+[gd_scene load_steps=8 format=3 uid="uid://viknds2u0ihm"]
+
+[ext_resource type="Script" path="res://Assets/levels/lvl1/testTower.gd" id="1_uut5p"]
+[ext_resource type="PackedScene" path="res://Assets/zombies/reg_z/regular_zombie.tscn" id="2_3vahj"]
+[ext_resource type="PackedScene" path="res://Assets/zombies/large_z/large_zombie.tscn" id="3_q47i0"]
+[ext_resource type="PackedScene" uid="uid://dvfliloxklisd" path="res://Assets/zombies/crawler_z/crawling_zombie.tscn" id="4_es0vi"]
+[ext_resource type="PackedScene" uid="uid://bcnig1ketbxaw" path="res://level.tscn" id="6_h5jj2"]
+[ext_resource type="PackedScene" uid="uid://c3asr02yfy877" path="res://testTower.tscn" id="7_jfe2g"]
+[ext_resource type="PackedScene" path="res://hud.tscn" id="7_sfjt7"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_uut5p")
+
+[node name="Zombie_Spawn" type="Timer" parent="."]
+wait_time = 2.0
+
+[node name="Level" parent="." instance=ExtResource("6_h5jj2")]
+script = ExtResource("1_uut5p")
+
+[node name="HUD" parent="." instance=ExtResource("7_sfjt7")]
+
+[node name="Crawling Zombie" parent="." instance=ExtResource("4_es0vi")]
+
+[node name="Large Zombie" parent="." instance=ExtResource("3_q47i0")]
+
+[node name="Regular Zombie" parent="." instance=ExtResource("2_3vahj")]
+
+[node name="testTower" parent="." instance=ExtResource("7_jfe2g")]
+position = Vector2(232, 454)
+
+[connection signal="timeout" from="Zombie_Spawn" to="." method="_on_zombie_spawn_timeout"]
+[connection signal="start_round" from="HUD" to="." method="_on_hud_start_round"]

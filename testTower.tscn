@@ -16,3 +16,7 @@ texture = ExtResource("2_8tgml")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="testTowerRange"]
 shape = SubResource("CircleShape2D_wt4fp")
+
+[connection signal="area_shape_entered" from="testTowerRange" to="." method="_on_test_tower_range_area_shape_entered"]
+[connection signal="body_entered" from="testTowerRange" to="." method="_on_test_tower_range_body_entered"]
+[connection signal="body_exited" from="testTowerRange" to="." method="_on_test_tower_range_body_exited"]

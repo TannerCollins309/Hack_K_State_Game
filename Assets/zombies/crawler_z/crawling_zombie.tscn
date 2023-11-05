@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bogj42ljjrbwn"]
+[gd_scene load_steps=8 format=3 uid="uid://dvfliloxklisd"]
 
 [ext_resource type="Script" path="res://Assets/zombies/crawler_z/crawling_zombie_values.gd" id="1_j0ue0"]
 [ext_resource type="Script" path="res://Assets/zombies/crawler_z/crawling_zombie_move.gd" id="1_ob70o"]
@@ -9,6 +9,8 @@
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_37vuh"]
 radius = 14.785
 height = 67.85
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vmq3u"]
 
 [node name="crawler_z_move" type="PathFollow2D"]
 position = Vector2(-35, 132)
@@ -39,3 +41,8 @@ scale = Vector2(0.3, 0.3)
 value = 100.0
 texture_under = ExtResource("3_b4jrq")
 texture_progress = ExtResource("4_vme1l")
+
+[node name="AnimatableBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D"]
+shape = SubResource("CircleShape2D_vmq3u")
