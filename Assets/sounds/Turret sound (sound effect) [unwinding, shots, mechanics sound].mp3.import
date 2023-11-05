@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bsyml53jy2ch1"
+path="res://.godot/imported/Turret sound (sound effect) [unwinding, shots, mechanics sound].mp3-d93a8032cbd80549028b5f28c37f773c.mp3str"
+
+[deps]
+
+source_file="res://Assets/sounds/Turret sound (sound effect) [unwinding, shots, mechanics sound].mp3"
+dest_files=["res://.godot/imported/Turret sound (sound effect) [unwinding, shots, mechanics sound].mp3-d93a8032cbd80549028b5f28c37f773c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

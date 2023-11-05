@@ -1,0 +1,79 @@
+[gd_resource type="SpriteFrames" load_steps=11 format=3 uid="uid://cisl3idqbmkpi"]
+
+[ext_resource type="Texture2D" uid="uid://b57acmqrckpdx" path="res://Assets/towers/tier_2/Turret Tier 2.png" id="1_gwbum"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qdmvx"]
+atlas = ExtResource("1_gwbum")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bn7nr"]
+atlas = ExtResource("1_gwbum")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1f4ys"]
+atlas = ExtResource("1_gwbum")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_le20x"]
+atlas = ExtResource("1_gwbum")
+region = Rect2(0, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sy76o"]
+atlas = ExtResource("1_gwbum")
+region = Rect2(192, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vvskl"]
+atlas = ExtResource("1_gwbum")
+region = Rect2(384, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2tmba"]
+atlas = ExtResource("1_gwbum")
+region = Rect2(0, 384, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3hslp"]
+atlas = ExtResource("1_gwbum")
+region = Rect2(192, 384, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0qyua"]
+atlas = ExtResource("1_gwbum")
+region = Rect2(384, 384, 192, 192)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qdmvx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bn7nr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1f4ys")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_le20x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sy76o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vvskl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2tmba")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3hslp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0qyua")
+}],
+"loop": true,
+"name": &"shoot",
+"speed": 24.0
+}]

@@ -1,5 +1,6 @@
 extends Node2D
 
+signal tower_1
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -12,4 +13,10 @@ func _process(delta):
 
 
 func _on_tower_spot_1_item_selected(index):
-	pass # Replace with function body.
+	match index:
+		0:
+			pass
+		1:
+			pass
+		2:
+			pass

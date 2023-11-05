@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bepycpu6i1t0r"]
+
+[ext_resource type="Texture2D" uid="uid://dt7lqv7q20wkw" path="res://Assets/levels/lvl0/NechroTechopolis.png" id="1_mbtrq"]
+[ext_resource type="Curve2D" uid="uid://b0bqycevlx7am" path="res://Assets/levels/lvl0/lvl_0.tres" id="2_7g6lx"]
+
+[node name="lvl_0" type="Node2D"]
+
+[node name="NechroTechopolis" type="Sprite2D" parent="."]
+scale = Vector2(0.667, 0.667)
+texture = ExtResource("1_mbtrq")
+centered = false
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = ExtResource("2_7g6lx")

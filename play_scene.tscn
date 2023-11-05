@@ -1,20 +1,21 @@
-[gd_scene load_steps=9 format=3 uid="uid://gsva32sfpc4y"]
+[gd_scene load_steps=10 format=3 uid="uid://gsva32sfpc4y"]
 
 [ext_resource type="Script" path="res://play_scene.gd" id="1_egn6o"]
 [ext_resource type="PackedScene" uid="uid://dqevk6e6f1sro" path="res://level.tscn" id="3_33way"]
 [ext_resource type="PackedScene" uid="uid://bqua0hdkfwgm6" path="res://hud.tscn" id="4_1gorm"]
 [ext_resource type="PackedScene" uid="uid://bogj42ljjrbwn" path="res://Assets/zombies/crawler_z/crawling_zombie.tscn" id="4_vk6jt"]
 [ext_resource type="PackedScene" uid="uid://c1udrqkpm0x15" path="res://Assets/zombies/large_z/large_zombie.tscn" id="5_hrpql"]
-[ext_resource type="PackedScene" uid="uid://b4n0dleihftoj" path="res://Assets/levels/lvl1/test_lvl.tscn" id="5_xqkxk"]
+[ext_resource type="PackedScene" uid="uid://bepycpu6i1t0r" path="res://Assets/levels/lvl0/lvl_0.tscn" id="5_xf4jc"]
 [ext_resource type="PackedScene" uid="uid://y1b1ic14ad8r" path="res://Assets/zombies/reg_z/regular_zombie.tscn" id="6_12q8e"]
 [ext_resource type="PackedScene" uid="uid://dh6uqkj1w5xeg" path="res://Assets/towers/tier_1/tier_1_tower.tscn" id="6_ugehl"]
+[ext_resource type="PackedScene" uid="uid://7mm5gmpxnru6" path="res://Assets/towers/tier_2/tier_2_tower.tscn" id="9_j2wrv"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_egn6o")
 reg_zombie_scene = ExtResource("6_12q8e")
 large_zombie_scene = ExtResource("5_hrpql")
 crawler_zombie_scene = ExtResource("4_vk6jt")
-level_scene = ExtResource("5_xqkxk")
+level_scene = ExtResource("5_xf4jc")
 turret_1_scene = ExtResource("6_ugehl")
 
 [node name="Zombie_Spawn" type="Timer" parent="."]
@@ -23,6 +24,12 @@ wait_time = 2.0
 [node name="Level" parent="." instance=ExtResource("3_33way")]
 
 [node name="HUD" parent="." instance=ExtResource("4_1gorm")]
+
+[node name="tier_1_tower" parent="." instance=ExtResource("6_ugehl")]
+position = Vector2(168, 193)
+
+[node name="tier_2_tower" parent="." instance=ExtResource("9_j2wrv")]
+position = Vector2(168, 462)
 
 [connection signal="timeout" from="Zombie_Spawn" to="." method="_on_zombie_spawn_timeout"]
 [connection signal="start_round" from="HUD" to="." method="_on_hud_start_round"]

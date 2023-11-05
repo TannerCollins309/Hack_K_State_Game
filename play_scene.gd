@@ -31,15 +31,15 @@ func _on_zombie_spawn_timeout():
 	match randnum:
 		1:
 			var new_reg_zomb = reg_zombie_scene.instantiate()
-			$Level/test_lvl/Path2D.add_child(new_reg_zomb)
+			$Level/lvl_0/Path2D.add_child(new_reg_zomb)
 			new_reg_zomb.reaches_end.connect(_on_regular_zombie_reaches_end)
 		2:
 			var new_large_zomb = large_zombie_scene.instantiate()
-			$Level/test_lvl/Path2D.add_child(new_large_zomb)
+			$Level/lvl_0/Path2D.add_child(new_large_zomb)
 			new_large_zomb.reaches_end.connect(_on_large_zombie_reaches_end)
 		3:
 			var new_crawler_zomb = crawler_zombie_scene.instantiate()
-			$Level/test_lvl/Path2D.add_child(new_crawler_zomb)
+			$Level/lvl_0/Path2D.add_child(new_crawler_zomb)
 			new_crawler_zomb.reaches_end.connect(_on_crawling_zombie_reaches_end)
 
 
