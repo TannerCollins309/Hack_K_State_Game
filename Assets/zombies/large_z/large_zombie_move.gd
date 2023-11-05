@@ -9,6 +9,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	set_progress(get_progress() + 50 * delta)
-	if progress == 100:
+	if get_parent().get_name() == "Path2D":
+		set_progress(get_progress() + 50 * delta)
+	if get_progress_ratio() == 1:
 		reaches_end.emit()
+		queue_free()
