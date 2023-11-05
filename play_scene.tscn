@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://gsva32sfpc4y"]
+[gd_scene load_steps=11 format=3 uid="uid://gsva32sfpc4y"]
 
 [ext_resource type="Script" path="res://play_scene.gd" id="1_egn6o"]
 [ext_resource type="PackedScene" uid="uid://dqevk6e6f1sro" path="res://level.tscn" id="3_33way"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://y1b1ic14ad8r" path="res://Assets/zombies/reg_z/regular_zombie.tscn" id="6_12q8e"]
 [ext_resource type="PackedScene" uid="uid://dh6uqkj1w5xeg" path="res://Assets/towers/tier_1/tier_1_tower.tscn" id="6_ugehl"]
 [ext_resource type="PackedScene" uid="uid://7mm5gmpxnru6" path="res://Assets/towers/tier_2/tier_2_tower.tscn" id="9_j2wrv"]
+[ext_resource type="PackedScene" uid="uid://canujvvknuvij" path="res://Assets/towers/tier_3/tier_3_tower.tscn" id="10_q2635"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_egn6o")
@@ -26,10 +27,13 @@ wait_time = 2.0
 [node name="HUD" parent="." instance=ExtResource("4_1gorm")]
 
 [node name="tier_1_tower" parent="." instance=ExtResource("6_ugehl")]
-position = Vector2(168, 193)
+position = Vector2(168, 467)
 
 [node name="tier_2_tower" parent="." instance=ExtResource("9_j2wrv")]
-position = Vector2(168, 462)
+position = Vector2(168, 191)
+
+[node name="tier_3_tower" parent="." instance=ExtResource("10_q2635")]
+position = Vector2(498, 192)
 
 [connection signal="timeout" from="Zombie_Spawn" to="." method="_on_zombie_spawn_timeout"]
 [connection signal="start_round" from="HUD" to="." method="_on_hud_start_round"]

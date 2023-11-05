@@ -1,0 +1,72 @@
+[gd_resource type="SpriteFrames" load_steps=10 format=3 uid="uid://b1rrpc68cpr1p"]
+
+[ext_resource type="Texture2D" uid="uid://crancgjw080bd" path="res://Assets/towers/tier_3/Turret Tier 3.png" id="1_0rvu1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3t4mj"]
+atlas = ExtResource("1_0rvu1")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qmx57"]
+atlas = ExtResource("1_0rvu1")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lx7b3"]
+atlas = ExtResource("1_0rvu1")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ku8q1"]
+atlas = ExtResource("1_0rvu1")
+region = Rect2(0, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v7ger"]
+atlas = ExtResource("1_0rvu1")
+region = Rect2(192, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_st0o5"]
+atlas = ExtResource("1_0rvu1")
+region = Rect2(384, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_083os"]
+atlas = ExtResource("1_0rvu1")
+region = Rect2(0, 384, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v1suy"]
+atlas = ExtResource("1_0rvu1")
+region = Rect2(192, 384, 192, 192)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3t4mj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qmx57")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lx7b3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ku8q1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v7ger")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_st0o5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_083os")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v1suy")
+}],
+"loop": true,
+"name": &"shoot",
+"speed": 18.0
+}]

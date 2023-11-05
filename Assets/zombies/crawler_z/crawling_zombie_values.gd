@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 var speed = 75
-var health = 2
+var health = 20
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
