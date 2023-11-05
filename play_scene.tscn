@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c1udrqkpm0x15" path="res://Assets/zombies/large_z/large_zombie.tscn" id="5_hrpql"]
 [ext_resource type="PackedScene" uid="uid://b4n0dleihftoj" path="res://Assets/levels/lvl1/test_lvl.tscn" id="5_xqkxk"]
 [ext_resource type="PackedScene" uid="uid://y1b1ic14ad8r" path="res://Assets/zombies/reg_z/regular_zombie.tscn" id="6_12q8e"]
-[ext_resource type="PackedScene" uid="uid://c3asr02yfy877" path="res://testTower.tscn" id="8_bavqp"]
+[ext_resource type="PackedScene" uid="uid://dh6uqkj1w5xeg" path="res://Assets/towers/tier_1/tier_1_tower.tscn" id="6_ugehl"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_egn6o")
@@ -15,6 +15,7 @@ reg_zombie_scene = ExtResource("6_12q8e")
 large_zombie_scene = ExtResource("5_hrpql")
 crawler_zombie_scene = ExtResource("4_vk6jt")
 level_scene = ExtResource("5_xqkxk")
+turret_1_scene = ExtResource("6_ugehl")
 
 [node name="Zombie_Spawn" type="Timer" parent="."]
 wait_time = 2.0
@@ -23,17 +24,5 @@ wait_time = 2.0
 
 [node name="HUD" parent="." instance=ExtResource("4_1gorm")]
 
-[node name="Crawling Zombie" parent="." instance=ExtResource("4_vk6jt")]
-
-[node name="Large Zombie" parent="." instance=ExtResource("5_hrpql")]
-
-[node name="Regular Zombie" parent="." instance=ExtResource("6_12q8e")]
-
-[node name="testTower" parent="." instance=ExtResource("8_bavqp")]
-position = Vector2(213, 248)
-
 [connection signal="timeout" from="Zombie_Spawn" to="." method="_on_zombie_spawn_timeout"]
 [connection signal="start_round" from="HUD" to="." method="_on_hud_start_round"]
-[connection signal="reaches_end" from="Crawling Zombie" to="." method="_on_crawling_zombie_reaches_end"]
-[connection signal="reaches_end" from="Large Zombie" to="." method="_on_large_zombie_reaches_end"]
-[connection signal="reaches_end" from="Regular Zombie" to="." method="_on_regular_zombie_reaches_end"]

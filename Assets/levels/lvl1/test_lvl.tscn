@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://b4n0dleihftoj"]
+[gd_scene load_steps=4 format=3 uid="uid://b4n0dleihftoj"]
 
 [ext_resource type="Texture2D" uid="uid://cstwr1s66s38p" path="res://Assets/levels/lvl1/lvl1.png" id="1_hcw6i"]
+[ext_resource type="Script" path="res://Assets/levels/lvl1/test_lvl.gd" id="1_lqw7r"]
 [ext_resource type="Curve2D" uid="uid://brwu2cfhip3o" path="res://Assets/levels/lvl1/map1path.tres" id="2_k2u32"]
 
 [node name="test_lvl" type="Node2D"]
+script = ExtResource("1_lqw7r")
 
 [node name="visual_map" type="Sprite2D" parent="."]
 texture = ExtResource("1_hcw6i")
@@ -11,3 +13,29 @@ centered = false
 
 [node name="Path2D" type="Path2D" parent="."]
 curve = ExtResource("2_k2u32")
+
+[node name="tower_spot_1" type="ItemList" parent="."]
+offset_left = 194.0
+offset_top = 194.0
+offset_right = 257.0
+offset_bottom = 284.0
+pivot_offset = Vector2(35, 50)
+allow_search = false
+item_count = 3
+item_0/text = "Tier 1"
+item_1/text = "Tier 2"
+item_2/text = "Tier 3"
+
+[node name="tower_spot_2" type="Node2D" parent="."]
+position = Vector2(246, 456)
+
+[node name="tower_spot_3" type="Node2D" parent="."]
+position = Vector2(454, 197)
+
+[node name="tower_spot_4" type="Node2D" parent="."]
+position = Vector2(628, 241)
+
+[node name="tower_spot_5" type="Node2D" parent="."]
+position = Vector2(807, 335)
+
+[connection signal="item_selected" from="tower_spot_1" to="." method="_on_tower_spot_1_item_selected"]

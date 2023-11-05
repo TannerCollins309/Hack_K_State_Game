@@ -1,0 +1,77 @@
+[gd_scene load_steps=11 format=3 uid="uid://dh6uqkj1w5xeg"]
+
+[ext_resource type="Texture2D" uid="uid://qbibj5prjgnk" path="res://Assets/towers/tier_1/Turret Tier 1.png" id="1_kgram"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hjcmr"]
+atlas = ExtResource("1_kgram")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_46jhq"]
+atlas = ExtResource("1_kgram")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4n6o8"]
+atlas = ExtResource("1_kgram")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lxunj"]
+atlas = ExtResource("1_kgram")
+region = Rect2(0, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tbmxb"]
+atlas = ExtResource("1_kgram")
+region = Rect2(192, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_402xs"]
+atlas = ExtResource("1_kgram")
+region = Rect2(384, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ardnd"]
+atlas = ExtResource("1_kgram")
+region = Rect2(0, 384, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_020rd"]
+atlas = ExtResource("1_kgram")
+region = Rect2(192, 384, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mb8ok"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hjcmr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_46jhq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4n6o8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lxunj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tbmxb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_402xs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ardnd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_020rd")
+}],
+"loop": true,
+"name": &"shoot",
+"speed": 24.0
+}]
+
+[node name="tier_1_tower" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_mb8ok")

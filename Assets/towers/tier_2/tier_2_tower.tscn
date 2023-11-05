@@ -1,0 +1,85 @@
+[gd_scene load_steps=12 format=3 uid="uid://7mm5gmpxnru6"]
+
+[ext_resource type="Texture2D" uid="uid://b57acmqrckpdx" path="res://Assets/towers/tier_2/Turret Tier 2.png" id="1_5t33c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c8o63"]
+atlas = ExtResource("1_5t33c")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dcsc3"]
+atlas = ExtResource("1_5t33c")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_impmu"]
+atlas = ExtResource("1_5t33c")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sxiqp"]
+atlas = ExtResource("1_5t33c")
+region = Rect2(0, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y62qc"]
+atlas = ExtResource("1_5t33c")
+region = Rect2(192, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5petb"]
+atlas = ExtResource("1_5t33c")
+region = Rect2(384, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_616iv"]
+atlas = ExtResource("1_5t33c")
+region = Rect2(0, 384, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0a6vq"]
+atlas = ExtResource("1_5t33c")
+region = Rect2(192, 384, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o0idc"]
+atlas = ExtResource("1_5t33c")
+region = Rect2(384, 384, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nsqhl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c8o63")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dcsc3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_impmu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sxiqp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y62qc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5petb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_616iv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0a6vq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o0idc")
+}],
+"loop": true,
+"name": &"shoot",
+"speed": 24.0
+}]
+
+[node name="tier_2_tower" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_nsqhl")
+frame_progress = 0.352114

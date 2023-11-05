@@ -4,6 +4,7 @@ extends Node
 @export var large_zombie_scene: PackedScene
 @export var crawler_zombie_scene: PackedScene
 @export var level_scene: PackedScene
+@export var turret_1_scene: PackedScene
 
 var numgen = RandomNumberGenerator.new()
 
