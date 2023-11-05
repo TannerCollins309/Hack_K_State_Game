@@ -1,5 +1,6 @@
 extends PathFollow2D
 
+signal reaches_end
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -9,3 +10,5 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	set_progress(get_progress() + 100 * delta)
+	if progress == 100:
+		reaches_end.emit()

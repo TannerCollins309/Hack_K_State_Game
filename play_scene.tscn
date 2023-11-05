@@ -30,3 +30,6 @@ wait_time = 2.0
 
 [connection signal="timeout" from="Zombie_Spawn" to="." method="_on_zombie_spawn_timeout"]
 [connection signal="start_round" from="HUD" to="." method="_on_hud_start_round"]
+[connection signal="reaches_end" from="Crawling Zombie" to="." method="_on_crawling_zombie_reaches_end"]
+[connection signal="reaches_end" from="Large Zombie" to="." method="_on_large_zombie_reaches_end"]
+[connection signal="reaches_end" from="Regular Zombie" to="." method="_on_regular_zombie_reaches_end"]

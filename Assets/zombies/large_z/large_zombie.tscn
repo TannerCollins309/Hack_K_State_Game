@@ -15,7 +15,7 @@ rotation = 0.0187478
 loop = false
 script = ExtResource("1_2n7ag")
 
-[node name="Large Zombie" type="Area2D" parent="."]
+[node name="Large Zombie" type="CharacterBody2D" parent="."]
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_ed3w7")
 

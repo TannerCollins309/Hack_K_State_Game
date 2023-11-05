@@ -15,7 +15,7 @@ rotation = 0.0187478
 loop = false
 script = ExtResource("1_1hj44")
 
-[node name="Regular Zombie" type="Area2D" parent="."]
+[node name="Regular Zombie" type="CharacterBody2D" parent="."]
 script = ExtResource("1_bco22")
 
 [node name="reg_z_sprite" type="AnimatedSprite2D" parent="Regular Zombie"]

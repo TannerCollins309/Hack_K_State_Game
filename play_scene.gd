@@ -37,4 +37,15 @@ func _on_zombie_spawn_timeout():
 		3:
 			var new_crawler_zomb = crawler_zombie_scene.instantiate()
 			$Level/test_lvl/Path2D.add_child(new_crawler_zomb)
-	
+
+
+func _on_regular_zombie_reaches_end():
+	health -= 3
+
+
+func _on_large_zombie_reaches_end():
+	health -= 6
+
+
+func _on_crawling_zombie_reaches_end():
+	health -= 2
