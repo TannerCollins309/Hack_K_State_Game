@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://gsva32sfpc4y"]
+[gd_scene load_steps=9 format=3 uid="uid://gsva32sfpc4y"]
 
 [ext_resource type="Script" path="res://play_scene.gd" id="1_egn6o"]
 [ext_resource type="PackedScene" uid="uid://dqevk6e6f1sro" path="res://level.tscn" id="3_33way"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c1udrqkpm0x15" path="res://Assets/zombies/large_z/large_zombie.tscn" id="5_hrpql"]
 [ext_resource type="PackedScene" uid="uid://b4n0dleihftoj" path="res://Assets/levels/lvl1/test_lvl.tscn" id="5_xqkxk"]
 [ext_resource type="PackedScene" uid="uid://y1b1ic14ad8r" path="res://Assets/zombies/reg_z/regular_zombie.tscn" id="6_12q8e"]
+[ext_resource type="PackedScene" uid="uid://c3asr02yfy877" path="res://testTower.tscn" id="8_bavqp"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_egn6o")
@@ -27,6 +28,9 @@ wait_time = 2.0
 [node name="Large Zombie" parent="." instance=ExtResource("5_hrpql")]
 
 [node name="Regular Zombie" parent="." instance=ExtResource("6_12q8e")]
+
+[node name="testTower" parent="." instance=ExtResource("8_bavqp")]
+position = Vector2(213, 248)
 
 [connection signal="timeout" from="Zombie_Spawn" to="." method="_on_zombie_spawn_timeout"]
 [connection signal="start_round" from="HUD" to="." method="_on_hud_start_round"]

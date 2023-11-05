@@ -8,7 +8,7 @@ func _physics_process(delta):
 	
 func turn():
 	currentTarget = getTarget()
-	print(currentTarget)
+	# print(currentTarget)
 
 func getTarget():
 	#var farthest
@@ -16,13 +16,7 @@ func getTarget():
 	# var progress
 	var node
 	for i in targetsInRange:
-		# node = get_tree().get_root().i
-		print(typeof(i))
-	#	progress = get_tree().get_root().get_node(i).get(progress)
-	#	if progress > farthest:
-	#		farthest = i
-	#		farthestProgress = progress
-	#return farthest
+		var progress = i.get_parent().get_progress_ratio()
 	return null
 
 func attack(target):
