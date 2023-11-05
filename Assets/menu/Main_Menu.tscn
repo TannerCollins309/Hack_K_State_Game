@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Assets/menu/Main_Menu.gd" id="1_bweva"]
 [ext_resource type="Texture2D" uid="uid://dr65o2jpf7km5" path="res://Assets/menu/1304990899.or.90622.png" id="1_imtdt"]
-[ext_resource type="Texture2D" uid="uid://um2r1s8ykfwg" path="res://Assets/menu/ZOMBOCALYPSE.png" id="2_ty75v"]
+[ext_resource type="Texture2D" uid="uid://hy02rvu6aefe" path="res://Assets/menu/ZOMBOCALYPSE.png" id="2_ty75v"]
 [ext_resource type="FontFile" uid="uid://mkqkx221ea0g" path="res://Assets/menu/comicbd.ttf" id="4_i0qes"]
 
 [sub_resource type="SystemFont" id="SystemFont_8e4ng"]

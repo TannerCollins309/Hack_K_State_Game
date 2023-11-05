@@ -1,22 +1,22 @@
 [gd_scene load_steps=4 format=3 uid="uid://c3asr02yfy877"]
 
 [ext_resource type="Script" path="res://Assets/levels/lvl1/testTower.gd" id="1_yde66"]
-[ext_resource type="Texture2D" uid="uid://rk1u5qkpiwdd" path="res://icon.svg" id="2_8tgml"]
+[ext_resource type="Texture2D" uid="uid://qbibj5prjgnk" path="res://Assets/towers/tier_1/Turret Tier 1.png" id="2_4o8kb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wt4fp"]
 radius = 100.0
 
-[node name="testTower" type="Node2D"]
+[node name="Tower" type="Node2D"]
 script = ExtResource("1_yde66")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_8tgml")
+[node name="TowerSprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_4o8kb")
 
-[node name="testTowerRange" type="Area2D" parent="."]
+[node name="TowerRange" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="testTowerRange"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TowerRange"]
 shape = SubResource("CircleShape2D_wt4fp")
 
-[connection signal="area_shape_entered" from="testTowerRange" to="." method="_on_test_tower_range_area_shape_entered"]
-[connection signal="body_entered" from="testTowerRange" to="." method="_on_test_tower_range_body_entered"]
-[connection signal="body_exited" from="testTowerRange" to="." method="_on_test_tower_range_body_exited"]
+[connection signal="area_shape_entered" from="TowerRange" to="." method="_on_test_tower_range_area_shape_entered"]
+[connection signal="body_entered" from="TowerRange" to="." method="_on_test_tower_range_body_entered"]
+[connection signal="body_exited" from="TowerRange" to="." method="_on_test_tower_range_body_exited"]
